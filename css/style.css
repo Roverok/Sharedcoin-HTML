@@ -1,0 +1,919 @@
+@font-face {
+    font-family: 'Gotham Bold';
+    src: url('../font/gothambold.eot');
+    src: url('../font/gothambold.eot?#iefix') format('embedded-opentype'),
+         url('../font/gothambold.woff') format('woff'),
+         url('../font/gothambold.ttf') format('truetype'),
+         url('../font/gothambold.svg#gothamboldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Gotham Book';
+    src: url('../font/gothambook.eot');
+    src: url('../font/gothambook.eot?#iefix') format('embedded-opentype'),
+         url('../font/gothambook.woff') format('woff'),
+         url('../font/gothambook.ttf') format('truetype'),
+         url('../font/gothambook.svg#gothambookregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Gotham Medium';
+    src: url('../font/gothammedium.eot');
+    src: url('../font/gothammedium.eot?#iefix') format('embedded-opentype'),
+         url('../font/gothammedium.woff') format('woff'),
+         url('../font/gothammedium.ttf') format('truetype'),
+         url('../font/gothammedium.svg#gothammediumregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*---------------------------------------------------------------------
+
+		BASE LAYOUT
+
+---------------------------------------------------------------------*/
+html, body { padding: 0 }
+body  .container { font: 18px/30px  "Gotham Book",  sans-serif; }
+.bg1 { 
+	background: url(../img/bg1-large.jpg) no-repeat left 0;
+}
+.bg1.bg1-2 { 
+	background: url(../img/bg2-large.jpg) no-repeat center 0;
+}
+.bg1.bg1-3 { 
+	background: url(../img/bg3-large.jpg) no-repeat center 0;
+}
+.bg2 { background: url(../img/bg_map.png) no-repeat center center fixed, url(../img/bg_grey.jpg) repeat }
+.bg-bottom { 
+	background: url(../img/divider_bg.png) repeat-x 0 bottom;
+	padding: 0 0 45px;
+}
+a,
+a:hover,
+a:active,
+a:focus { 
+	text-decoration: none;
+	outline: none;
+}
+ul { list-style-type: none }
+hr { border: 1px solid #dedede; background: #dedede }
+.container.content{ max-width: 960px }
+textarea:focus, 
+input[type="text"]:focus, 
+input[type="password"]:focus, 
+input[type="datetime"]:focus, 
+input[type="datetime-local"]:focus, 
+input[type="date"]:focus, 
+input[type="month"]:focus, 
+input[type="time"]:focus, 
+nput[type="week"]:focus, 
+input[type="number"]:focus, 
+input[type="email"]:focus, 
+input[type="url"]:focus, 
+input[type="search"]:focus,
+input[type="tel"]:focus,
+ input[type="color"]:focus, 
+ .uneditable-input:focus {
+	-moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+	color: #626262;
+	border: solid 1px #c6c5c3;
+	text-decoration: none;
+}
+.primary form fieldset .step ul li .button,
+.bt a,
+.button,
+.submit {
+	background: #1ca4dd;
+	background: -moz-linear-gradient(top,  #1ca4dd 51%, #039bd3 51%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(51%,#1ca4dd), color-stop(51%,#039bd3));
+	background: -webkit-linear-gradient(top,  #1ca4dd 51%,#039bd3 51%);
+	background: -o-linear-gradient(top,  #1ca4dd 51%,#039bd3 51%);
+	background: -ms-linear-gradient(top,  #1ca4dd 51%,#039bd3 51%);
+	background: linear-gradient(to bottom,  #1ca4dd 51%,#039bd3 51%);
+	border: 0;
+	cursor: pointer;
+	display: inline-block;
+	-moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+	-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+	color: #fff;
+	font: 17px/17px "Gotham Medium", sans-serif;
+	padding: 18px 0px;
+	text-shadow: 0 1px #0086bd;
+	text-transform: none;
+}
+.ie .primary form fieldset .step ul li .button,
+.ie .bt a,
+.ie .button,
+.ie .submit,
+.ie .primary form fieldset .step ul li .button:hover,
+.ie .bt a:hover,
+.ie .button:hover,
+.ie .submit:hover,
+.ie .primary form fieldset .step ul li .button:active,
+.ie .bt a:active,
+.ie .button:active,
+.ie .submit:active,
+.ie .bt.green,
+.ie .bt.green:hover,
+.ie .bt.green:active  {
+	background: url(../img/bt.png) repeat-x;
+	filter: none;
+}
+.primary form fieldset .step ul li .button:hover,
+.bt a:hover,
+.button:hover,
+.submit:hover {
+	background: #1eaeea; /* Old browsers */
+	background: -moz-linear-gradient(top,  #1eaeea 50%, #2989d8 50%, #1e5799 50%, #03a6e2 50%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,#1eaeea), color-stop(50%,#2989d8), color-stop(50%,#1e5799), color-stop(50%,#03a6e2));
+	background: -webkit-linear-gradient(top,  #1eaeea 50%,#2989d8 50%,#1e5799 50%,#03a6e2 50%);
+	background: -o-linear-gradient(top,  #1eaeea 50%,#2989d8 50%,#1e5799 50%,#03a6e2 50%);
+	background: -ms-linear-gradient(top,  #1eaeea 50%,#2989d8 50%,#1e5799 50%,#03a6e2 50%); 
+	background: linear-gradient(to bottom,  #1eaeea 50%,#2989d8 50%,#1e5799 50%,#03a6e2 50%);
+}
+.ie .primary form fieldset .step ul li .button:hover,
+.ie .bt a:hover,
+.ie .button:hover,
+.ie .submit:hover  {
+	background-position: 0 -56px;
+	filter: none;
+}
+.primary form fieldset .step ul li .button:active,
+.bt a:active,
+.button:active,
+.submit:active {
+	background: #188bbb;
+	background: -moz-linear-gradient(top,  #188bbb 50%, #1e5799 50%, #03a6e2 50%, #0393c9 50%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,#188bbb), color-stop(50%,#1e5799), color-stop(50%,#03a6e2), color-stop(50%,#0393c9));
+	background: -webkit-linear-gradient(top,  #188bbb 50%,#1e5799 50%,#03a6e2 50%,#0393c9 50%); 
+	background: -o-linear-gradient(top,  #188bbb 50%,#1e5799 50%,#03a6e2 50%,#0393c9 50%); 
+	background: -ms-linear-gradient(top,  #188bbb 50%,#1e5799 50%,#03a6e2 50%,#0393c9 50%);
+	background: linear-gradient(to bottom,  #188bbb 50%,#1e5799 50%,#03a6e2 50%,#0393c9 50%);
+}
+.primary form fieldset .step ul li .button:active,
+.bt a:active,
+.button:active,
+.submit:active {
+	background-position: 0 -56px;
+	filter: none;
+}
+.ie .primary form fieldset .step ul li .button:active,
+.ie .bt a:active,
+.ie .button:active,
+.ie .submit:active {
+	background-position: 0 -112px;
+	filter: none;
+}
+.bt.green {
+	background: #78b73c;
+	background: -moz-linear-gradient(top,  #78b73c 51%, #6fae34 51%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(51%,#78b73c), color-stop(51%,#6fae34)); 
+	background: -webkit-linear-gradient(top,  #78b73c 51%,#6fae34 51%); 
+	background: -o-linear-gradient(top,  #78b73c 51%,#6fae34 51%);
+	background: -ms-linear-gradient(top,  #78b73c 51%,#6fae34 51%);
+	background: linear-gradient(to bottom,  #78b73c 51%,#6fae34 51%); 
+	text-shadow: 0 1px #5e9d21;
+}
+.ie .bt.green {
+	background-position: 0 -168px;
+	filter: none;
+}
+.bt.green:hover {
+	background: #7dbf3f;
+	background: -moz-linear-gradient(top,  #7dbf3f 50%, #03a6e2 50%, #0393c9 50%, #75b836 50%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,#7dbf3f), color-stop(50%,#03a6e2), color-stop(50%,#0393c9), color-stop(50%,#75b836));
+	background: -webkit-linear-gradient(top,  #7dbf3f 50%,#03a6e2 50%,#0393c9 50%,#75b836 50%);
+	background: -o-linear-gradient(top,  #7dbf3f 50%,#03a6e2 50%,#0393c9 50%,#75b836 50%);
+	background: -ms-linear-gradient(top,  #7dbf3f 50%,#03a6e2 50%,#0393c9 50%,#75b836 50%);
+	background: linear-gradient(to bottom,  #7dbf3f 50%,#03a6e2 50%,#0393c9 50%,#75b836 50%);
+}
+.ie .bt.green:hover {
+	background-position: 0 -224px;
+	filter: none;
+}
+.bt.green:active {
+	background: #629a2d;
+	background: -moz-linear-gradient(top,  #629a2d 50%, #0393c9 50%, #75b836 50%, #68a330 50%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,#629a2d), color-stop(50%,#0393c9), color-stop(50%,#75b836), color-stop(50%,#68a330));
+	background: -webkit-linear-gradient(top,  #629a2d 50%,#0393c9 50%,#75b836 50%,#68a330 50%); 
+	background: -o-linear-gradient(top,  #629a2d 50%,#0393c9 50%,#75b836 50%,#68a330 50%); 
+	background: -ms-linear-gradient(top,  #629a2d 50%,#0393c9 50%,#75b836 50%,#68a330 50%); 
+	background: linear-gradient(to bottom,  #629a2d 50%,#0393c9 50%,#75b836 50%,#68a330 50%); 
+}
+.ie .bt.green:active {
+	background-position: 0 -280px;
+	filter: none;
+}
+
+/*	Header
+-------------------------------*/
+#header { 
+	min-height: 0px;
+	margin: 0 0 60px;
+}
+#header .brand { 
+	display: none;
+	float: left;
+	margin: 0;
+}
+#social { 
+	overflow: hidden; 
+	margin: 15px 0 10px 25px;
+	float: right;
+}
+#social li { 
+	float: left;
+	margin: 0 0 0 20px;
+}
+#social li:first-child { margin: 0 }
+#social li a,
+.navbar .navbar-inner .container #nav ul li:first-child a span,
+.primary form fieldset .step2 .arrow,
+#footer .start .social li a  {
+	background: url(../img/bts_social.png) no-repeat  -109px 0;
+	display: block;
+	text-indent: -9999px;
+	width: 32px; height: 32px;
+}
+#social li:first-child a { background-position: -59px 0 }
+.navbar {
+	background: none;
+	float: left;
+	margin: 0; 
+}
+.navbar .navbar-inner {
+	background: none;
+	border: 0;
+	-moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
+	-moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+	min-height: 55px;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	padding-left: 0;
+}
+.navbar .navbar-inner .container a.btn.btn-navbar { 
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.4);
+	-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+	border: 0 none;
+	-moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+	float: left;
+	margin: 0 auto;
+	padding: 7px 9px;
+	width: 32px; height: 31px;
+}
+.navbar .navbar-inner .container span.bt-navbar { 
+	-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+	background: none;
+	border: solid 4px #fff;
+	display: block;
+	padding: 0;
+	width: 24px; height: 23px;
+}
+.navbar .navbar-inner .container a.btn.btn-navbar span.icon-bar { 
+	-moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
+	margin: 2px auto;
+	width: 16px; height: 4px;
+}
+.navbar .navbar-inner .container a.btn.btn-navbar span.icon-bar:first-child { margin-top: 4px }
+.navbar .navbar-inner .container .nav-collapse.collapse { padding: 10px 0 0 }
+.navbar .navbar-inner .container #nav ul { 
+	overflow: hidden;
+	margin-left: 0;
+}	
+.navbar .navbar-inner .container #nav ul li { 
+	float: left;
+	line-height: 40px;
+	margin: 0 0 10px 10px;
+	position: relative;
+}
+.navbar .navbar-inner .container #nav ul li:first-child { margin: 0 0 10px }
+.navbar .navbar-inner .container #nav ul li a,
+.primary .bt a {
+	background: #000;
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.4);
+	-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+	color: #fff;
+	display: inline-block;
+	font: 14px/15px "Gotham Medium", sans-serif;
+	padding: 15px 65px;
+	text-shadow: 0 1px #000;
+	outline: none;
+	text-transform: uppercase;
+	text-decoration: none;
+	-webkit-transition: none; -moz-transition: none; transition: none;
+}
+.navbar .navbar-inner .container #nav ul li a { -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; transition: all 0.2s ease; }
+.navbar .navbar-inner .container #nav ul li a:hover,
+.primary .bt a:hover,
+.navbar .navbar-inner .container #nav ul li a:active,
+.primary .bt a:active,
+.navbar .navbar-inner .container #nav ul li.active a  {
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.6);
+}
+.navbar .navbar-inner .container #nav ul li:first-child a { 
+	filter: none;
+	display: block;
+	-moz-border-radius: 30px; -webkit-border-radius: 30px; border-radius: 30px;
+	padding: 0;
+	width: 46px; height: 45px;
+}
+.navbar .navbar-inner .container #nav ul li:first-child a span { 
+	-moz-border-radius: 30px; -webkit-border-radius: 30px; border-radius: 30px;
+	background-position: 0 0;
+	width: 46px; height: 45px;
+}
+.navbar .navbar-inner .container #nav ul li:last-child a { text-transform: none }
+
+/*	Home
+-------------------------------*/
+.primary { min-height: 535px }
+.primary .brand { 
+	margin: 0 0 20px;
+	padding: 0 5px;
+}
+.primary h1 {
+	color: #fff;
+	font: 36px/46px "Gotham Medium", Sans-serif;
+	margin: 0 0 30px;
+	text-shadow: 0 1px #000;
+}
+.primary h1.third { font: 36px/46px "Gotham Bold", Sans-serif }
+.primary h1 span {
+	display: block;
+	margin: 20px 0 0;
+}
+.primary p {
+	color: #fff;
+	margin: 0 0 20px;
+	text-shadow: 0 1px #000;
+}
+.primary p strong { font: 18px/30px "Gotham Bold", sans-serif }
+.primary .bt a {
+	color: #78b73c;
+	font: 14px/30px "Gotham Bold", sans-serif;
+	padding: 8px 15px;
+}
+.primary form {
+	background: url(../img/br_form.png) repeat;
+	margin: 0 0 10px;
+	padding: 10px;
+}
+.primary form fieldset {
+	background: url(../img/bg_form.png) repeat;
+	padding: 40px;
+}
+.primary form fieldset .step2 { display: none }
+.primary form fieldset .step ul {
+	margin: 0;
+	text-align: center;
+}
+.primary form fieldset .step ul li { margin: 20px 0 0 }
+.primary form fieldset .step ul li:first-child { margin: 0 }
+.primary form fieldset .step ul li:first-child + li { margin: 10px 0 0 }
+.primary form fieldset .step ul li p {
+	color: #2c2c2c;
+	font: 16px/17px "Gotham Medium", sans-serif;
+	margin: 0;
+	text-shadow: none;
+	text-align: center;
+}
+.primary form fieldset .step  ul li .text {
+	background: #fff;
+	-moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
+	border: solid 1px #c6c5c3;
+	color: #626262;
+	font: 17px/17px "Gotham Book", sans-serif;
+	margin: 0;
+	padding: 15px 40px;
+	text-align: center;
+	width: 78%;
+}
+.primary form fieldset .step  ul li p.bt {
+	border-top: solid 1px #c6c5c3;
+	-moz-box-shadow: 0 1px 0 0 #eae6e6 inset; -webkit-box-shadow: 0 1px 0 0 #eae6e6 inset; box-shadow: 0 1px 0 0 #eae6e6 inset;
+	padding: 20px 0 0;
+}
+.primary form fieldset .step  ul li .button { width: 84% }
+.primary form fieldset .step  ul li .submit { width: 100% }
+.primary form fieldset .step2 .arrow {
+	background-position: -325px 0;
+	display: block;
+	margin: 35px auto;
+	width: 47px; height: 48px;
+}
+.primary form fieldset .step2  ul li span {
+	color: #000;
+	font: 13px/14px "Gotham Medium", sans-serif;
+}
+.primary form fieldset .step2  ul li p.bt { margin: 0 0 10px }
+.primary form fieldset .step2 .help {
+	color: #039bd3;
+	font: 13px/14px "Gotham Bold", sans-serif;
+	text-transform: uppercase;
+}
+.primary .leyend { 
+	font: 13px/22px "Gotham Medium", sans, serif;
+	overflow: hidden;
+}
+.primary .leyend { 
+	float: right;
+	width: 210px;
+}
+.secondary {
+	padding: 65px 0 0;
+	text-align: center;
+}
+.secondary  h1,
+.secondary  h1 + p {
+	color: #000;
+	font: 36px/37px "Gotham Bold", sans-serif;
+	margin: 0 0 15px;
+	text-shadow: 0 1px #fff;
+}
+.secondary  h1 + p {
+	font: 18px/28px "Gotham Book", sans-serif;
+	margin: 0 0 35px;
+}
+.secondary  h1 + p strong { font: 18px/28px "Gotham Bold", sans-serif }
+.secondary .service { 
+	overflow: hidden;
+	margin: 0 0 40px;
+}
+.secondary .service li { 
+	float: left;
+	margin: 10px 0 0 99px;
+}
+.secondary .service li:first-child { margin: 0 }
+.secondary .service li figure { margin: 0 0 20px }
+.secondary .service li figure img{ 
+	display: block;
+	margin: 0 auto;
+}
+.secondary .service li figure img:first-child { margin-bottom: 20px } 
+.secondary .service .service1 figure { text-align: right }
+.secondary .service .service1 figure img:first-child { margin: 0 0 20px 175px }
+.secondary .service .service3 figure img:first-child { margin: 0 245px 20px 0 }
+.secondary .service li h2 {
+	color: #000;
+	font: 18px/28px "Gotham Bold", sans-serif;
+	margin: 0 auto;
+	text-transform: uppercase;
+	text-shadow: 0 1px #fff;
+	width: 150px;
+}
+.secondary .faqs {
+	border-top: 1px solid #dedede;
+	-moz-box-shadow: 0 1px 0 0 #fff inset; -webkit-box-shadow: 0 1px 0 0 #fff inset; box-shadow: 0 1px 0 0 #fff inset;
+	padding: 40px 0 0;
+}
+.secondary .faqs h3,
+#footer .start h3 {
+	color: #000;
+	font: 18px/30px "Gotham Medium",sans-serif;
+	margin: 0 0 10px;
+	text-shadow: 0 1px #fff;
+}
+.secondary .faqs > p { 
+	margin: 0;
+	outline: none;
+	padding: 0 0 90px;
+	text-align: center;
+}
+.secondary .faqs p.read-more a {
+	background: #fafafa;
+	border: solid 1px #dedede;
+	-moz-border-radius 4px; -webkit-border-radius: 4px; border-radius: 4px;
+	color: #039bd3;
+	display: inline-block;
+	font: 17px/17px "Gotham Medium",sans-serif;
+	outline: none;
+	text-decoration: none;
+	padding: 18px 55px;
+}
+.secondary .faqs p.read-more a:active,
+.secondary .faqs p.read-more a:hover { color: #6fae34 }
+.secondary .faqs .list-faqs { 
+	display: none;
+	margin: 0;
+	padding: 0 0 85px;
+}
+.secondary .faqs .list-faqs ul { overflow: hidden }
+.secondary .faqs .list-faqs ul li { text-align: left }
+.secondary .faqs .list-faqs ul li h4 {
+	color: #000;
+	font: 14px/24px "Gotham Bold", sans-serif;
+	text-shadow: 0 1px #fff;
+}
+.secondary .faqs .list-faqs ul li p {
+	color: #000;
+	font: 12px/20px "Gotham Book", sans-serif;
+	margin: 0 0 15px;
+}
+
+
+/*	Footer
+-------------------------------*/
+#footer { 
+	background: #fff;
+	border-top: solid 1px #dedede;
+	padding: 0 0 35px;
+}
+#footer .start { text-align: center }
+#footer .start .bt-close a {
+	background: url(../img/arrow.png) no-repeat;
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	outline: none;
+	position: relative; top: -35px;
+	text-indent: -9999px;
+	width: 95px; height: 69px; 
+}
+#footer .start h3 { margin: 0 0 15px }
+#footer .start hr + h3 { margin: 0 0 30px }
+#footer .start p.bt + hr { margin-bottom: 60px }
+#footer .start p.bt { margin: 0 0 60px }
+#footer .start p.bt a { padding: 18px 55px }
+#footer .start .social { 
+	overflow: hidden;
+	margin: 0 0 75px 25px;
+}
+#footer .start .social li { 
+	display: inline-block;
+	margin: 0 0 0 40px;
+}
+#footer .start .social li:first-child { margin: 0 }
+#footer .start .social li a { width: 51px; height: 50px;
+}
+#footer .start .social li.fb a { background-position: -157px 0 }
+#footer .start .social li.tw a { background-position: -248px 0 }
+#footer  .content-info { background: url(../img/watermark.png) no-repeat center 0 }
+#footer .divider { margin: 50px 0 30px }
+#footer .watermark figure { 
+	margin: 0 10px;
+	text-align: center;
+}
+#footer .divider1 { 
+	float: left;
+	width: 46%; 
+}
+#footer .watermark { 
+	float: left;
+	width: 12%;
+}
+#footer .divider2 { 
+	float: left;
+	width: 42%;
+}
+#footer ul { margin: 0 }
+#footer .copy { float: left }
+#footer .info { float: right }
+#footer .copy li,
+#footer .info li {
+	color: #b6b6b6;
+	font: 13px/13px "Gotham Medium", sans-serif;
+}
+#footer .copy li:first-child { margin: 0 }
+#footer .info { margin: 0 }
+#footer .info li { text-align: right }
+#footer .copy li span,
+#footer .info li span{ 
+	display: block;
+	margin: 10px 0 0;
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media (max-width: 450px) { 
+	#header .brand { width: 47%  }
+	.navbar { float: right }
+	#footer .divider { margin: 30px 0 }
+	.secondary .faqs .list-faqs ul { 
+		margin-left: 0;
+		padding: 0 15px;
+	}
+}
+@media (max-width: 479px) {
+	.bg1 { 
+	background: url(../img/bg1.jpg) no-repeat -300px 0;
+	}
+	.bg1.bg1-2 { 
+	background: url(../img/bg2.jpg) no-repeat -500px 0;
+	}
+	.bg1.bg1-3 { 
+	background: url(../img/bg3.jpg) no-repeat no-repeat -500px 0;
+	}
+	.bg2 { background: none, url(../img/bg_grey.jpg) repeat }
+	.bg-bottom {
+		background: none;
+		padding: 0;
+	}
+	.container.content { padding: 0 5px !important }
+	#header { 
+		margin: 0 0 20px;
+		padding: 3px 0 0;
+	}
+	#header .brand { 
+		display: block;
+		width: 37%;
+	}
+	.navbar .navbar-inner { padding: 0 }
+	.navbar .navbar-inner .container #nav ul li a, 
+	.primary .bt a { padding: 10px 40px }
+	.navbar .navbar-inner .container .nav-collapse.collapse { padding: 0 10px 0 0 }
+	.navbar-inner { padding-right: 0 }
+	.navbar .navbar-inner .container #nav ul li:first-child a { width: 43px; height: 42px; }
+	.navbar .navbar-inner .container #nav ul li:first-child a span { 
+		background-position: -1px -1px;
+		width: 43px; height: 42px;
+	}
+	.primary { min-height: 350px }
+	.primary h1 { 
+		font: 22px/26px "Gotham Medium",Sans-serif;
+		margin: 0 0 15px;
+		padding: 0 15px;
+		text-align: center;
+	}
+	.primary h1.third { font: 22px/26px "Gotham Bold", Sans-serif }
+	.secondary h1, .secondary h1 + p { font: 22px/26px "Gotham Medium",Sans-serif }
+	.primary h1 span { margin: 0 }
+	.primary form { padding: 5px }
+	.primary form fieldset { padding: 15px }
+	.primary form fieldset .step ul li p { font: 14px/17px "Gotham Medium",sans-serif }
+	.primary form fieldset .step2 ul li span { font: 12px/14px "Gotham Medium",sans-serif }
+	.primary form fieldset .step2 .arrow { 
+		background-position: -464px 0;
+		margin: 25px auto 10px;
+		width: 33px; height: 31px;
+	}
+	.primary .leyend { 
+		font: 12px/22px "Gotham Medium",sans,serif;
+		text-align: center;
+		width: 100%;
+	}
+	.primary .leyend span span { display: block }
+	.primary form fieldset .step ul li .text {
+		font: 14px/17px "Gotham Book",sans-serif;
+		padding: 8px;
+		text-align: center;
+		width: 93%;
+	}
+	.primary form fieldset .step ul li .button { 
+		padding: 10px 5px;
+		width: 92%;
+	}
+	.primary form fieldset .step ul li .button,
+	.bt a,
+	.button, 
+	.submit,
+	#footer .start p.bt a { 
+		font: 13px/17px "Gotham Medium",sans-serif;
+		padding: 11px 10px;
+	}
+	#footer .start p.bt a { width: 85% }
+	.secondary .faqs p.read-more a { 
+		padding: 13px 55px;
+		font: 14px/17px "Gotham Medium",sans-serif;
+	}
+	.secondary { padding: 33px 0 0 }
+	.secondary .container.content { padding: 0 20px !important }
+	.secondary h1, .secondary h1 + p { margin: 0 0 30px }
+	.secondary .service li h2 { width: 100% }
+	.secondary .service li figure img { max-width: 35% }
+	.secondary .service { margin: 0 0 10px }
+	.secondary .faqs > p { padding: 0 0 60px }
+	.secondary .faqs .list-faqs ul { 
+		margin-left: 0;
+		padding: 0 15px;
+	}
+	#footer .start .bt-close { margin: 0 }
+	#footer .start .social { margin-left: 0 }
+	#footer .info { 
+		float: none;
+		margin: 40px 0 0;
+	}
+	#footer .info li { text-align: left }
+	#footer .start p.bt { margin: 0 auto 30px }
+	#footer .copy li, #footer .info li { font: 12px/12px "Gotham Medium",sans-serif }
+	#footer .copy li span:before,
+	#footer .info li span:before {	content:" - " }
+	.box-hide { display: none }
+}
+@media (max-width: 479px) and (orientation : landscape) {
+	.bg1 { 
+	background: url(../img/bg1-small.jpg) no-repeat -300px 0;
+	}
+	.bg1.bg1-2 { 
+		background: url(../img/bg2-small.jpg) no-repeat -500px 0;
+	}
+	.bg1.bg1-3 { 
+		background: url(../img/bg3-small.jpg) no-repeat -500px 0;
+	}
+}
+@media (min-width: 480px) and (max-width: 768px) { 
+	#header .brand { 
+		display: block;
+		width: 30% 
+	}
+	.navbar { float: right }
+	.navbar .navbar-inner { padding: 0 }
+	.navbar .navbar-inner .container .nav-collapse.collapse { padding: 10px 10px 0 0 }
+	.primary form fieldset .step ul li .text { 
+		text-align: center;
+		width: 80%;
+	} 
+	.primary form fieldset .step ul li .button { 
+		text-align: center;
+		width: 85%;
+	}	 
+	.secondary .service li { 
+		float: none;
+		margin: 0;
+	}
+	.primary p.box-hide { display: none }
+	.primary form fieldset { padding: 20px }
+	.primary form fieldset .step ul li .text { 
+		font: 14px/17px "Gotham Book",sans-serif;
+		padding: 10px 5px;
+		width: 97%;
+	}
+	.primary form fieldset .step ul li .button, 
+	.bt a, 
+	.button, 
+	.submit {
+		font: 14px/17px "Gotham Medium",sans-serif;
+		padding: 18px 25px;
+	}
+	.navbar .navbar-inner .container a.btn.btn-navbar { 
+		float: right;
+		margin: 0 10px 0 0;
+		width: 37px; height: 36px;
+	}
+	.navbar .navbar-inner .container span.bt-navbar { width: 29px; height: 28px; }
+	.navbar .navbar-inner .container a.btn.btn-navbar span.icon-bar {
+		margin: 4px auto;
+		width: 19px;
+	}
+	#footer .start p.bt a { font: 17px/17px "Gotham Medium",sans-serif }
+	#footer .divider1 { width: 44% }
+	#footer .divider2 { width: 44% }
+}
+@media only screen and (max-width: 1200px) { 
+	#header .brand { display: none}
+	.container.content { padding: 0 10px }
+	.secondary .service li { margin: 10px 0 0 88px }
+}
+@media (max-width: 768px) { 
+	#header .brand { 
+		display: block;
+		width: 25%;
+	}	
+	.navbar { float: right }
+	.navbar .navbar-inner { padding: 0 }
+	.primary .brand { display: none }
+	.navbar .navbar-inner .container a.btn.btn-navbar { 
+		float: right;
+		margin: 5px 10px 0 0;
+	}
+	.navbar .navbar-inner .container #nav ul { 
+		float: right;
+		margin-top: 10px;
+	}
+	.navbar .navbar-inner .container #nav ul li { 
+		float: none;
+		margin: 0 0 3px 10px;
+		text-align: right;
+	}
+	.navbar .navbar-inner .container #nav ul li:first-child { 
+		text-align: center;
+		height: 45px;
+	}
+	.navbar .navbar-inner .container #nav ul li:first-child a { position: absolute; top: 0; right: 0; }
+	.navbar .navbar-inner .container #nav ul li a {
+		display: block;
+		text-align: center;
+	}
+	#social  { display: none }
+	#footer .info { 
+		float: none;
+		margin: 40px 0 0;
+	}
+	#footer .info li { text-align: left }
+	.secondary .service .service1 figure img:first-child { margin: 0 0 20px 116px }
+	.secondary .service li { margin: 10px 0 0 36px }
+	.secondary .service .service3 figure img:first-child { margin: 0 175px 20px 0 }
+	.secondary .service .service1 figure img:first-child,
+	.secondary .service li figure img:first-child,
+	.secondary .service .service3 figure img:first-child { display: none }
+	.secondary .service li:first-child,
+	.secondary .service li { 
+		float: none;
+		margin: 0 0 25px;
+	}
+	#footer .start .social { margin: 0 auto 30px }
+	#footer .content-watermark { 
+		margin: 0 0 20px;
+		padding: 0 15px;
+	}
+	#footer .info { margin: 0 }
+	#footer .copy { float: none }
+	#footer .copy li ,
+	#footer .info li { text-align: center }
+	#footer .copy li span,
+	#footer .info li span {
+		display: inline;
+		margin: 0;
+	}
+}
+@media (max-width: 680px) {
+	#header .brand { 
+		display: block;
+		margin: 0 0 0 10px;
+		width: 37%;
+	}
+	.navbar { float: right }
+	.navbar .navbar-inner { padding: 0 }
+	.navbar .navbar-inner .container #nav ul li { 
+		float: none;
+		margin-left: 0;
+	}
+	#footer .divider1 { width: 38% }
+	#footer .watermark { width: 24% }
+	#footer .divider2 { width: 38% }
+}
+@media (min-width: 769px) and (max-width: 979px) {
+	#header .brand {
+		display: block;
+		width: 25%;
+	}
+	.navbar .navbar-inner { padding: 0 }
+	.navbar .navbar-inner .container a.btn.btn-navbar { 
+		float: right;
+		margin: 5px 10px 0 0;
+	}
+	.navbar .navbar-inner .container .nav-collapse.collapse { padding: 10px 10px 0 0 }
+	.navbar {
+		float: right;
+		width: 30%;
+	}
+	.navbar .navbar-inner .container #nav ul li {
+		float: none;
+		display: block;
+		margin: 0 0 3px 10px;
+	}
+	.navbar .navbar-inner .container #nav ul li a {
+		display: block;
+		text-align: center;
+	}
+	.navbar .navbar-inner .container #nav ul li:first-child { 
+		text-align: center;
+		height: 45px;
+	}
+	.navbar .navbar-inner .container #nav ul li:first-child a { position: absolute; top: 0; right: 0; }
+	#social {	
+		display: none;
+		margin: 10px 0 10px 15px;
+	}
+	.primary .brand { display: none }
+	.primary form fieldset { padding: 20px }
+	.primary form fieldset .step ul li .text { 
+		font: 14px/17px "Gotham Book",sans-serif;
+		padding: 10px 5px;
+		width: 97%;
+	}
+	.primary form fieldset .step2 .arrow { margin: 20px auto }
+	.primary form fieldset .step ul li .button { width: 82% }
+	.primary form fieldset .step ul li .button,
+	.bt a, 
+	.button, 
+	.submit {
+		font: 14px/17px "Gotham Medium",sans-serif;
+		padding: 18px 25px;
+	}
+	.navbar .navbar-inner .container a.btn.btn-navbar { 
+		float: right;
+		margin: 0 10px 0 0;
+		width: 37px; height: 36px;
+	}
+	.navbar .navbar-inner .container span.bt-navbar { width: 29px; height: 28px; }
+	.navbar .navbar-inner .container a.btn.btn-navbar span.icon-bar {
+		margin: 4px auto;
+		width: 19px;
+	}
+	#footer .start p.bt a { font: 17px/17px "Gotham Medium",sans-serif }
+	.secondary .service li { margin: 10px 0 0 46px }
+	.secondary .service li:first-child { margin: 0 }
+	.secondary .service .service1 figure img:first-child { margin: 0 0 20px 135px }
+	.secondary .service .service3 figure img:first-child { margin: 0 150px 20px 0 }
+}
+@media only screen and (min-width : 1399px) { body .container { width: 1400px } }
